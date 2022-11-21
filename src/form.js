@@ -64,8 +64,8 @@ const Form = ({backendurl}) => {
 
 
   return (
-    <form className="pl-5 grid place-items-center text-white opacity-75 transition-all text-xl" onSubmit={onSubmit}>
-      <div className="name grid grid-rows-2  w-3/4 pb-7">
+    <form className="md:pl-10  grid place-items-start pl-5 text-white opacity-75 transition-all text-xl" onSubmit={onSubmit}>
+      <div className="name grid grid-rows-2 w-3/4 pb-7">
         <span className="pb-3">
           <label>Name</label>
         </span>
@@ -127,7 +127,9 @@ const Form = ({backendurl}) => {
             <option value={"cs"}>CS (R)</option>
             <option value={"eee"}>EEE (E)</option>
             <option value={"chem"}>Chem(H)</option>
-            <option value={"arch"}>Arch(A)</option>
+            <option value={"arch"} >Arch(A)</option>
+            <option value={"mech-pro"}>Mech Pro</option>
+            <option value={"electrical&computer"}>Electrical and Computer Engineering </option>
           </select>
         </div>
       </div>
@@ -230,7 +232,7 @@ const Form = ({backendurl}) => {
         </div>
       </div>
       <div className="service grid grid-rows-2 w-3/4 pb-7">
-        <span className="pb-3"><label>Preffered Type Of Services</label></span>
+        <span className="pb-3"><label>Preferred Type Of Services</label></span>
         <div>
           <select name="typeofservice" onChange={handleChange} className="w-3/4 py-4 rounded-lg gray-bg">
             <option value={"null"} disabled selected>choose option</option>
@@ -242,6 +244,16 @@ const Form = ({backendurl}) => {
             <option value={" Awareness on social, cultural and ethical values and norms"}> Awareness on social, cultural and ethical values and norms</option>
             <option value={"General counselling services"}> General counselling services</option>
 
+          </select>
+        </div>
+      </div>
+      <div className="grid grid-rows-2  w-3/4 pb-7">
+        <span className="pb-3"><label>Are you already ISTE member ?</label></span>
+        <div>
+          <select className="w-3/4 py-4 rounded-lg gray-bg">
+          <option value={"null"} disabled selected>choose option</option>
+          <option value={"yes"}>Yes</option>
+          <option value={"no"}>No</option>
           </select>
         </div>
       </div>
@@ -282,7 +294,7 @@ const Form = ({backendurl}) => {
         <input type="file" name="file" onChange={handleFile} className="file-input file-input-bordered w-full max-w-xs" />
       </div>
 
-      <div className="sub-btn flex justify-center py-10">
+      <div className="place-self-center sub-btn flex justify-center py-10">
         <button type="submit" className="btn btn-normal bg-[#162173]">Submit</button>
       </div>
       
